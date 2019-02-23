@@ -1,0 +1,11 @@
+
+<h1>Cool List</h1>
+<div #coolListEl class="search-results"
+      infinite-scroll
+      [infiniteScrollDistance]='scrollDistance'
+      [infiniteScrollThrottle]="throttle"
+      (scrolled)="onScrollDown()">
+  <div class='row' *ngFor="let i of array">
+    {{ i.content }}
+  </div>
+</div>
